@@ -10,6 +10,8 @@ export class AppComponent {
   displayVal : string ='';
   show=false;
   color="blue";
+  colorOne='green'
+  bgClor='orange'
   user=["tawhid","sajib","kalam","raz"];
 
   userDetails=[
@@ -36,6 +38,11 @@ export class AppComponent {
   count =0;
   getcount(type :string){
     type ==='add'? this.count++:this.count--
+  }
+
+  changeColor(){
+    this.colorOne="blue"
+    this.bgClor="red"
   }
 
  
