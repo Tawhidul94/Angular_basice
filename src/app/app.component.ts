@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -43,6 +44,12 @@ export class AppComponent {
   changeColor(){
     this.colorOne="blue"
     this.bgClor="red"
+  }
+  userFormData:any={}
+  getFormData(data:NgForm){
+    this.userFormData=data
+    
+    
   }
 
  

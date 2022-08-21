@@ -1,3 +1,4 @@
+<app-header></app-header>
 <h1>Bangladesh {{title}}</h1>
 <button (click)="getData('Tawhidul islam')">clicMe</button>
 <br /><br />
@@ -44,5 +45,21 @@
 </ul>
 <h2 [style.color] = "colorOne" [style.backgroundColor] = "bgClor">All employ present saturday</h2>
 <button (click) = "changeColor()">Change color By button click</button>
+<br/><br/>
+<form #basicForm="ngForm" (submit)="getFormData(basicForm.value)">
+    <input type="text" ngModel placeholder="Enter name " name="name">
+    <br/><br/>
+    <input type="text" ngModel placeholder="Enter email " name="email">
+    <br/><br/>
+    <input type="text" ngModel placeholder="Enter phone " name="phone">
+    <br/><br/>
+    <button>Submit</button>
+</form>
+<ul>
+    <li>{{userFormData.name}}</li>
+    <li>{{userFormData.email}}</li>
+    <li>{{userFormData.phone}}</li>
+
+</ul>
 
 <app-profile></app-profile>
